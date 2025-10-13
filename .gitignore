@@ -1,0 +1,29 @@
+# Build output
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# IDE
+.vs/
+.idea/
+.vscode/
+
+# Tests/packages/cache
+TestResults/
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+*.cache
+*.tmp
+
+# User files
+*.user
+*.suo
+*.userprefs
+
+# System
+Thumbs.db
+.DS_Store
