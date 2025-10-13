@@ -39,6 +39,7 @@ Validation: DataAnnotations, FluentValidation
 Version Control: Git, GitHub
 
 IDE: Visual Studio, VS Code 
+
 ✨ Final Note
 
 This repository is a reflection of my journey as a student and aspiring developer.
