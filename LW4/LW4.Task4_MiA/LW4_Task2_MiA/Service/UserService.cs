@@ -15,11 +15,9 @@ namespace LW4_Task4_MiA.Service
             _collection = db.GetCollection<User>("Users");
         }
 
-        public async Task<IEnumerable<User>> GetAllAsync()
-            => await _repo.GetAllAsync();
+        public async Task<IEnumerable<User>> GetAllAsync() => await _repo.GetAllAsync();
 
-        public async Task<User?> GetByIdAsync(string id)
-            => await _repo.GetByIdAsync(id);
+        public async Task<User?> GetByIdAsync(string id) => await _repo.GetByIdAsync(id);
 
         public async Task<User> CreateAsync(User user)
         {

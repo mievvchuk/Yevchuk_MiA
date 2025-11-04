@@ -12,11 +12,9 @@ namespace LW4_Task4_MiA.Service
             _repo = repo;
         }
 
-        public async Task<IEnumerable<Category>> GetAllAsync()
-            => await _repo.GetAllAsync();
+        public async Task<IEnumerable<Category>> GetAllAsync() => await _repo.GetAllAsync();
 
-        public async Task<Category?> GetByIdAsync(string id)
-            => await _repo.GetByIdAsync(id);
+        public async Task<Category?> GetByIdAsync(string id) => await _repo.GetByIdAsync(id);
 
         public async Task<Category> CreateAsync(Category category)
         {

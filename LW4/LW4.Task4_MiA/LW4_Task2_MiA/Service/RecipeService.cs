@@ -14,11 +14,9 @@ namespace LW4_Task4_MiA.Service
             _ratings = ratings;
         }
 
-        public async Task<IEnumerable<Recipe>> GetAllAsync()
-            => await _recipes.GetAllAsync();
+        public async Task<IEnumerable<Recipe>> GetAllAsync() => await _recipes.GetAllAsync();
 
-        public async Task<Recipe?> GetByIdAsync(string id)
-            => await _recipes.GetByIdAsync(id);
+        public async Task<Recipe?> GetByIdAsync(string id) => await _recipes.GetByIdAsync(id);
 
         public async Task<Recipe> CreateAsync(Recipe recipe)
         {

@@ -1,10 +1,12 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using LW4_Task2_MiA.Repositories;
+using LW4_Task4_MiA.Mapping;
+using LW4_Task4_MiA.Service;
 using LW4_Task4_MiA.Settings;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using LW4_Task4_MiA.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,7 +44,13 @@ builder.Services.AddScoped<IRepository<LW4_Task2_MiA.Models.Rating>>(sp =>
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IRatingService, RatingService>();
 builder.Services.AddScoped<IRecipeService, RecipeService>();
-builder.Services.AddScoped<IUserService, UserService>(); 
+builder.Services.AddScoped<IUserService, UserService>();
+
+//AutoMapper
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<MappingProfile>();
+});
 
 builder.Services.AddControllers().AddJsonOptions(o => { }).ConfigureApiBehaviorOptions(o => { });
 

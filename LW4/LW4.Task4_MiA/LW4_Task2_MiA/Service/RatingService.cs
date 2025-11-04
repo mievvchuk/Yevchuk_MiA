@@ -15,11 +15,9 @@ namespace LW4_Task4_MiA.Service
             _collection = db.GetCollection<Rating>("Ratings");
         }
 
-        public async Task<IEnumerable<Rating>> GetAllAsync()
-            => await _repo.GetAllAsync();
+        public async Task<IEnumerable<Rating>> GetAllAsync() => await _repo.GetAllAsync();
 
-        public async Task<Rating?> GetByIdAsync(string id)
-            => await _repo.GetByIdAsync(id);
+        public async Task<Rating?> GetByIdAsync(string id) => await _repo.GetByIdAsync(id);
 
         public async Task<Rating> CreateAsync(Rating rating)
         {
@@ -40,8 +38,7 @@ namespace LW4_Task4_MiA.Service
             return await _repo.UpdateAsync(id, rating);
         }
 
-        public async Task<bool> DeleteAsync(string id)
-            => await _repo.DeleteAsync(id);
+        public async Task<bool> DeleteAsync(string id) => await _repo.DeleteAsync(id);
 
         public async Task DeleteByRecipeIdAsync(string recipeId)
         {
