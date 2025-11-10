@@ -1,0 +1,6 @@
+@LW4_Task2_MiA_HostAddress = http://localhost:5141
+
+GET {{LW4_Task2_MiA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
